@@ -1,0 +1,66 @@
+@include media-md {
+  .menu-btn {
+    display: none;
+  }
+
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      height: 80px;
+      transform: translateY(0);
+      flex-direction: row;
+
+      width: 100%;
+      justify-content: flex-end;
+      background: transparent;
+
+      &__item {
+        transform: translateX(0);
+        font-size: 1rem;
+        padding-right: 1rem;
+      }
+
+      &.opac {
+        background: $primary-color;
+      }
+    }
+  }
+
+  .projects {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .contacts {
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include media-lg {
+  .projects {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .contacts {
+    &__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      &__item {
+        font-size: 1.8rem;
+        padding-right: 1.5rem;
+      }
+    }
+  }
+}
